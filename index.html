@@ -35,7 +35,9 @@
                     <a href="en/index.html" class="hover:text-white transition">EN</a>
                     <a href="es/index.html" class="hover:text-white transition">ES</a>
                 </div>
+                <a href="https://www.facebook.com/profile.php?id=100091759916546" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://www.linkedin.com/company/ada-service/" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/adaservice_" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
     </div>
@@ -51,6 +53,20 @@
                     <a href="https://wa.me/5511916561571" target="_blank" class="text-slate-600 hover:text-primary-500 transition flex items-center gap-1"><i class="fa-solid fa-user-tie"></i> Recrutamento</a>
                 </nav>
                 <div class="hidden md:flex"><a href="https://wa.me/5511916641722" target="_blank" class="bg-secondary-500 hover:bg-secondary-600 text-white font-bold py-2.5 px-6 rounded-full shadow-md transition flex items-center gap-2"><i class="fa-brands fa-whatsapp"></i> Falar com Especialista</a></div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-slate-600 p-2 rounded-md">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-lg absolute w-full left-0 transition-all">
+            <div class="px-4 py-6 space-y-4 font-medium text-base">
+                <a href="index.html" class="block py-2 text-slate-700 hover:text-primary-500">Home</a>
+                <a href="#sobre" class="block py-2 text-slate-700 hover:text-primary-500">Sobre Nós</a>
+                <a href="servicos.html" class="block py-2 text-slate-700 hover:text-primary-500">Serviços</a>
+                <a href="#contato" class="block py-2 text-slate-700 hover:text-primary-500">Contato</a>
             </div>
         </div>
     </header>
@@ -149,6 +165,11 @@
             <div class="md:col-span-2">
                 <span class="text-xl font-bold tracking-wider text-white">Ada Service <span class="text-primary-500">Calibração e Inspeção</span></span>
                 <p class="mt-4 text-sm max-w-sm">Soluções de alto desempenho com cobertura sem fronteiras desde 2011.</p>
+                <div class="mt-6 flex items-center gap-4 text-lg">
+                    <a href="https://www.facebook.com/profile.php?id=100091759916546" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/ada-service/" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/adaservice_" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                </div>
             </div>
             <div>
                 <h4 class="text-white font-semibold text-sm uppercase mb-4">Navegação</h4>
@@ -165,6 +186,29 @@
         </div>
     </footer>
     <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                if (icon) {
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-xmark');
+                }
+            });
+        }
+
+        menu?.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                if (icon) {
+                    icon.className = 'fa-solid fa-bars text-2xl';
+                }
+            });
+        });
+
         document.getElementById('quoteForm')?.addEventListener('submit', function(e) {
             var response = grecaptcha.getResponse();
             if(response.length == 0) {

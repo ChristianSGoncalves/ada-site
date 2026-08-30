@@ -31,7 +31,9 @@
                     <a href="servicos.html" class="text-primary-500">EN</a>
                     <a href="../es/servicos.html" class="hover:text-white transition">ES</a>
                 </div>
-                <a href="https://linktr.ee/adaservice" target="_blank" class="hover:text-white transition font-bold">LINKTREE</a>
+                <a href="https://www.facebook.com/profile.php?id=100091759916546" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/company/ada-service/" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/adaservice_" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
     </div>
@@ -47,6 +49,20 @@
                     <a href="https://wa.me/5511916561571" target="_blank" class="hover:text-primary-500 transition flex items-center gap-1"><i class="fa-solid fa-user-tie"></i> Recruitment</a>
                 </nav>
                 <div class="hidden md:flex"><a href="https://wa.me/5511916641722" target="_blank" class="bg-primary-500 hover:bg-primary-600 text-white font-bold py-2.5 px-6 rounded-full shadow-md">Quick Quote</a></div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-slate-600 p-2 rounded-md">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-lg absolute w-full left-0 transition-all">
+            <div class="px-4 py-6 space-y-4 font-medium text-base">
+                <a href="index.html" class="block py-2 text-slate-700 hover:text-primary-500">Home</a>
+                <a href="index.html#sobre" class="block py-2 text-slate-700 hover:text-primary-500">About Us</a>
+                <a href="servicos.html" class="block py-2 text-primary-500 font-bold">Services</a>
+                <a href="index.html#contato" class="block py-2 text-slate-700 hover:text-primary-500">Contact</a>
             </div>
         </div>
     </header>
@@ -92,6 +108,10 @@
                 <div class="w-12 h-12 bg-primary-500 text-white rounded-xl flex items-center justify-center text-xl mb-6"><i class="fa-solid fa-heart-pulse"></i></div>
                 <h2 class="text-3xl font-black text-primary-900 mb-6 uppercase">Clinical Engineering</h2>
                 <p class="text-slate-600 mb-6">Strategic management of the technology lifecycle, maximizing equipment lifespan and reducing downtime.</p>
+                <ul class="text-slate-600 space-y-2 mb-8">
+                    <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-secondary-500 mt-1"></i> Inventory management and maintenance plans.</li>
+                    <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-secondary-500 mt-1"></i> Technical consulting for technology acquisition.</li>
+                </ul>
                 <a href="https://wa.me/5511916641722" target="_blank" class="bg-secondary-500 hover:bg-secondary-600 text-white font-bold py-3 px-8 rounded-xl transition shadow-md">Request Quote</a>
             </div>
             <div class="lg:order-1 bg-slate-200 rounded-3xl h-[400px] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800');"></div>
@@ -102,8 +122,37 @@
             <div class="md:col-span-2">
                 <span class="text-xl font-bold tracking-wider text-white">Ada Service <span class="text-primary-500">Calibration and Inspection</span></span>
                 <p class="mt-4 text-sm max-w-sm">Raising the standard of safety and technology in large-scale healthcare and industry since 2011.</p>
+                <div class="mt-6 flex items-center gap-4 text-lg">
+                    <a href="https://www.facebook.com/profile.php?id=100091759916546" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/ada-service/" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/adaservice_" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                </div>
             </div>
         </div>
     </footer>
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                if (icon) {
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-xmark');
+                }
+            });
+        }
+
+        menu?.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                if (icon) {
+                    icon.className = 'fa-solid fa-bars text-2xl';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
