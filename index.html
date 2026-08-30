@@ -321,12 +321,14 @@
                             <textarea name="mensagem" rows="3" required class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:border-primary-500 focus:bg-white transition text-sm" placeholder="Ex: Necessito de calibração em 15 instrumentos e inspeção em 1 caldeira."></textarea>
                         </div>
 
-                        <!-- CAPTCHA Matemático -->
-                        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200">
-                            <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Verificação de Segurança</label>
+                        <!-- CAPTCHA de Clique (Human Check) -->
+                        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 flex items-center justify-between">
                             <div class="flex items-center gap-3">
-                                <span id="captcha-question" class="text-sm font-bold text-primary-900 bg-white px-3 py-2 rounded-lg border border-slate-200 whitespace-nowrap tracking-tighter"></span>
-                                <input type="number" id="captcha-answer" required class="w-full px-4 py-2 rounded-xl bg-white border border-slate-200 focus:outline-none focus:border-primary-500 transition text-sm" placeholder="Resultado">
+                                <input type="checkbox" id="human-check" class="w-6 h-6 rounded border-slate-300 text-primary-500 focus:ring-primary-500 cursor-pointer">
+                                <label for="human-check" class="text-sm font-semibold text-slate-700 cursor-pointer select-none">Sou humano</label>
+                            </div>
+                            <div class="text-center hidden sm:block">
+                                <i class="fa-solid fa-shield-check text-primary-200 text-2xl"></i>
                             </div>
                         </div>
 
@@ -403,23 +405,13 @@
             });
         });
 
-        // Lógica do CAPTCHA Matemático
-        const captchaQuestion = document.getElementById('captcha-question');
-        const num1 = Math.floor(Math.random() * 10) + 1;
-        const num2 = Math.floor(Math.random() * 10) + 1;
-        const total = num1 + num2;
-
-        if (captchaQuestion) {
-            captchaQuestion.textContent = `Quanto é ${num1} + ${num2}?`;
-        }
-
+        // Lógica do CAPTCHA de Clique
         document.getElementById('quoteForm')?.addEventListener('submit', function(e) {
-            const userAnswer = document.getElementById('captcha-answer').value;
+            const isHuman = document.getElementById('human-check').checked;
             
-            if (parseInt(userAnswer) !== total) {
+            if (!isHuman) {
                 e.preventDefault();
-                alert('Desculpe, a resposta do desafio de segurança está incorreta. Tente novamente.');
-                document.getElementById('captcha-answer').focus();
+                alert('Por favor, confirme que você é humano clicando na caixa de verificação.');
             }
         });
     </script>
