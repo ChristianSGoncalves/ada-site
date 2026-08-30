@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluções Globais - Ada Service Calibração e Inspeção</title>
+    <meta name="description" content="Soluções de Alta Performance com Cobertura Sem Fronteiras: Inspeção Termográfica, NR-13, Qualificação Hospitalar e Engenharia Clínica em ampla escala.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#0066cc',
+                            600: '#0052a3',
+                            700: '#003d7a',
+                            900: '#0c2340',
+                        },
+                        secondary: {
+                            500: '#10b981',
+                            600: '#059669',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Top Bar -->
+    <div class="bg-primary-900 text-slate-300 py-2 text-xs border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span class="flex items-center gap-1">
+                    <i class="fa-solid fa-phone text-primary-500"></i> +55 11 91664-1722
+                </span>
+            </div>
+            <div class="flex items-center gap-4 text-sm">
+                <a href="https://linktr.ee/adaservice" target="_blank" class="hover:text-white transition font-bold">LINKTREE</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 bg-white/95 backdrop-blur-md shadow-sm z-50 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-100">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <span class="text-2xl font-black tracking-wider text-primary-900">ADA <span class="text-primary-500">SERVICE</span></span>
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                    <a href="index.html" class="hover:text-primary-500 transition">Home</a>
+                    <a href="index.html#sobre" class="hover:text-primary-500 transition">Sobre Nós</a>
+                    <a href="servicos.html" class="text-primary-500 transition">Serviços</a>
+                    <a href="index.html#contato" class="hover:text-primary-500 transition">Contato</a>
+                </nav>
+                <div class="hidden md:flex">
+                    <a href="https://wa.me/5511916641722" target="_blank" class="bg-primary-500 hover:bg-primary-600 text-white font-bold py-2.5 px-6 rounded-full shadow-md transition">
+                        Orçamento Rápido
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-slate-600 p-2"><i class="fa-solid fa-bars text-2xl" id="menu-icon"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-lg px-4 py-6 space-y-4 font-medium">
+            <a href="index.html" class="block py-2 text-slate-700 hover:text-primary-500">Home</a>
+            <a href="index.html#sobre" class="block py-2 text-slate-700 hover:text-primary-500">Sobre Nós</a>
+            <a href="servicos.html" class="block py-2 text-primary-500 font-bold">Serviços</a>
+            <a href="index.html#contato" class="block py-2 text-slate-700 hover:text-primary-500">Contato</a>
+        </div>
+    </header>
+
+    <!-- Hero Especializado -->
+    <section class="bg-primary-900 py-20 text-white text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="text-4xl sm:text-5xl font-black mb-6">Soluções de Alta Performance sem Fronteiras</h1>
+            <p class="text-lg text-slate-300">Mobilização técnica ágil e atendimento global para garantir a máxima disponibilidade do seu parque de equipamentos.</p>
+        </div>
+    </section>
+
+    <!-- Seções de Serviços -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-24">
+        
+        <!-- 1. Inspeção Termográfica -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <div class="w-12 h-12 bg-primary-500 text-white rounded-xl flex items-center justify-center text-xl mb-6 shadow-lg shadow-primary-200"><i class="fa-solid fa-temperature-half"></i></div>
+                <h2 class="text-3xl font-black text-primary-900 mb-6 uppercase tracking-tight">Inspeção Termográfica</h2>
+                <div class="space-y-4 text-slate-600 leading-relaxed">
+                    <p>Utilizamos tecnologia infravermelha de alta resolução para mapear perfis térmicos e identificar anomalias em estágios iniciais. Nosso foco é a **eficiência operacional** e a **manutenção preditiva**.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-secondary-500 mt-1"></i> Mapeamento de quadros elétricos e subestações.</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-secondary-500 mt-1"></i> Detecção de sobrecargas e conexões frouxas.</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-secondary-500 mt-1"></i> Prevenção rigorosa contra incêndios e paradas não programadas.</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/5511916641722?text=Olá! Gostaria de um orçamento para Inspeção Termográfica." target="_blank" class="mt-8 inline-block bg-secondary-500 hover:bg-secondary-600 text-white font-bold py-3 px-8 rounded-xl transition shadow-md">Solicitar Orçamento</a>
+            </div>
+            <div class="bg-slate-200 rounded-3xl h-[400px] bg-cover bg-center shadow-inner" style="background-image: url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=800');"></div>
+        </section>
+
+        <!-- 2. Inspeção NR-13 -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="lg:order-2">
+                <div class="w-12 h-12 bg-primary-500 text-white rounded-xl flex items-center justify-center text-xl mb-6 shadow-lg shadow-primary-200"><i class="fa-solid fa-clipboard-check"></i></div>
+                <h2 class="text-3xl font-black text-primary-900 mb-6 uppercase tracking-tight">Inspeção NR-13</h2>
+                <div class="space-y-4 text-slate-600 leading-relaxed">
+                    <p>Garantimos a total **conformidade legal** e **segurança operacional** de equipamentos que operam sob pressão. Nossos engenheiros qualificados realizam diagnósticos precisos para evitar acidentes graves.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-secondary-500 mt-1"></i> Inspeção técnica em caldeiras e vasos de pressão.</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-secondary-500 mt-1"></i> Testes hidrostáticos e medição de espessura por ultrassom.</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-secondary-500 mt-1"></i> Atualização e elaboração de prontuários e livros de registro.</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/5511916641722?text=Olá! Gostaria de um orçamento para Inspeção NR-13." target="_blank" class="mt-8 inline-block bg-secondary-500 hover:bg-secondary-600 text-white font-bold py-3 px-8 rounded-xl transition shadow-md">Solicitar Orçamento</a>
+            </div>
+            <div class="lg:order-1 bg-slate-200 rounded-3xl h-[400px] bg-cover bg-center shadow-inner" style="background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800');"></div>
+        </section>
+
+        <!-- 3. Qualificação Hospitalar -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <div class="w-12 h-12 bg-primary-500 text-white rounded-xl flex items-center justify-center text-xl mb-6 shadow-lg shadow-primary-200"><i class="fa-solid fa-microscope"></i></div>
+                <h2 class="text-3xl font-black text-primary-900 mb-6 uppercase tracking-tight text-balance leading-tight">Qualificação de Equipamentos Hospitalares</h2>
+                <div class="space-y-4 text-slate-600 leading-relaxed">
+                    <p>Rigor técnico absoluto para a **segurança do paciente**. Realizamos testes de desempenho e calibrações em tecnologias médicas críticas, atendendo às normas da ANVISA e órgãos reguladores.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-secondary-500 mt-1"></i> Ensaios de segurança elétrica conforme IEC 60601.</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-secondary-500 mt-1"></i> Calibração de ventiladores, monitores e bombas de infusão.</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-secondary-500 mt-1"></i> Emissão de certificados para acreditação hospitalar (ONA/JCI).</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/5511916641722?text=Olá! Gostaria de um orçamento para Qualificação Hospitalar." target="_blank" class="mt-8 inline-block bg-secondary-500 hover:bg-secondary-600 text-white font-bold py-3 px-8 rounded-xl transition shadow-md">Solicitar Orçamento</a>
+            </div>
+            <div class="bg-slate-200 rounded-3xl h-[400px] bg-cover bg-center shadow-inner" style="background-image: url('https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=800');"></div>
+        </section>
+
+        <!-- 4. Engenharia Clínica -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center pb-12 border-b border-slate-100">
+            <div class="lg:order-2">
+                <div class="w-12 h-12 bg-primary-500 text-white rounded-xl flex items-center justify-center text-xl mb-6 shadow-lg shadow-primary-200"><i class="fa-solid fa-heart-pulse"></i></div>
+                <h2 class="text-3xl font-black text-primary-900 mb-6 uppercase tracking-tight">Engenharia Clínica</h2>
+                <div class="space-y-4 text-slate-600 leading-relaxed">
+                    <p>Gestão estratégica total do ciclo de vida tecnológico. Maximizamos a **vida útil dos equipamentos** e reduzimos o tempo de inatividade operacional através de metodologias gerenciais robustas.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-secondary-500 mt-1"></i> Gestão de inventário e planos de manutenção preventiva.</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-secondary-500 mt-1"></i> Consultoria técnica para aquisição de novas tecnologias.</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-secondary-500 mt-1"></i> Treinamento de equipes para uso seguro dos equipamentos.</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/5511916641722?text=Olá! Gostaria de um orçamento para Engenharia Clínica." target="_blank" class="mt-8 inline-block bg-secondary-500 hover:bg-secondary-600 text-white font-bold py-3 px-8 rounded-xl transition shadow-md">Solicitar Orçamento</a>
+            </div>
+            <div class="lg:order-1 bg-slate-200 rounded-3xl h-[400px] bg-cover bg-center shadow-inner" style="background-image: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800');"></div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary-900 text-slate-400 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="md:col-span-2">
+                <span class="text-xl font-bold tracking-wider text-white">Ada Service <span class="text-primary-500">Calibração e Inspeção</span></span>
+                <p class="mt-4 text-sm max-w-sm">Elevando o padrão de segurança e tecnologia em saúde e indústria em ampla escala desde 2011.</p>
+                <div class="mt-6 flex gap-4 text-lg">
+                    <a href="https://www.facebook.com/profile.php?id=100091759916546" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/ada-service/" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/adaservice_" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linktr.ee/adaservice" target="_blank" class="hover:text-white transition"><i class="fa-solid fa-tree"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Acesso Rápido</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                    <li><a href="index.html#sobre" class="hover:text-white transition">Sobre Nós</a></li>
+                    <li><a href="servicos.html" class="hover:text-white transition">Serviços</a></li>
+                    <li><a href="index.html#contato" class="hover:text-white transition">Contato</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Sede Administrativa</h4>
+                <p class="text-sm">Rua Atílio Delanina, 289<br>Osasco, SP - Brasil</p>
+                <p class="mt-2 text-[10px] text-slate-500 italic">Capacidade de mobilização técnica e atendimento a nível global.</p>
+                <p class="mt-4 text-xs">Copyright &copy; 2024 Ada Service Calibração e Inspeção. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.className = 'fa-solid fa-bars text-2xl';
+            } else {
+                icon.className = 'fa-solid fa-xmark text-2xl';
+            }
+        });
+
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.className = 'fa-solid fa-bars text-2xl';
+            });
+        });
+    </script>
+</body>
+</html>
