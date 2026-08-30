@@ -45,10 +45,10 @@
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center"><a href="index.html" class="flex items-center gap-2"><span class="text-2xl font-black tracking-wider text-primary-900">ADA <span class="text-primary-500">SERVICE</span></span></a></div>
                 <nav class="hidden md:flex space-x-8 text-sm font-semibold">
-                    <a href="index.html" class="text-slate-600 hover:text-primary-500 transition">Home</a>
-                    <a href="index.html#sobre" class="text-slate-600 hover:text-primary-500 transition">Sobre Nós</a>
+                    <a href="#home" class="text-slate-600 hover:text-primary-500 transition">Home</a>
+                    <a href="#sobre" class="text-slate-600 hover:text-primary-500 transition">Sobre Nós</a>
                     <a href="servicos.html" class="text-slate-600 hover:text-primary-500 transition">Serviços</a>
-                    <a href="index.html#contato" class="text-slate-600 hover:text-primary-500 transition">Contato</a>
+                    <a href="#contato" class="text-slate-600 hover:text-primary-500 transition">Contato</a>
                     <a href="https://wa.me/5511916561571" target="_blank" class="text-slate-600 hover:text-primary-500 transition flex items-center gap-1"><i class="fa-solid fa-user-tie"></i> Recrutamento</a>
                 </nav>
                 <div class="hidden md:flex"><a href="https://wa.me/5511916641722" target="_blank" class="bg-secondary-500 hover:bg-secondary-600 text-white font-bold py-2.5 px-6 rounded-full shadow-md transition flex items-center gap-2"><i class="fa-brands fa-whatsapp"></i> Falar com um Especialista</a></div>
@@ -150,14 +150,32 @@
     <footer class="bg-primary-900 text-slate-400 py-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
             <div class="md:col-span-2"><span class="text-xl font-bold tracking-wider text-white">Ada Service <span class="text-primary-500">Calibração e Inspeção</span></span><p class="mt-4 text-sm max-w-sm">Soluções de alto desempenho com cobertura sem fronteiras em inspeção termográfica, NR-13 e engenharia clínica desde 2011.</p></div>
-            <div><h4 class="text-white font-semibold text-sm uppercase mb-4">Navegação</h4><ul class="space-y-2 text-sm"><li><a href="index.html" class="hover:text-white">Home</a></li><li><a href="index.html#sobre" class="hover:text-white">Sobre Nós</a></li><li><a href="servicos.html" class="hover:text-white transition">Serviços</a></li><li><a href="index.html#contato" class="hover:text-white">Contato</a></li></ul></div>
+            <div><h4 class="text-white font-semibold text-sm uppercase mb-4">Navegação</h4><ul class="space-y-2 text-sm"><li><a href="#home" class="hover:text-white">Home</a></li><li><a href="#sobre" class="hover:text-white">Sobre Nós</a></li><li><a href="servicos.html" class="hover:text-white transition">Serviços</a></li><li><a href="#contato" class="hover:text-white">Contato</a></li></ul></div>
             <div><h4 class="text-white font-semibold text-sm uppercase mb-4">Sede Corporativa</h4><p class="text-sm">Rua Atílio Delanina, 289<br>Osasco, SP - Brasil</p><p class="mt-4 text-xs">Copyright &copy; 2024 Ada Service. Todos os direitos reservados.</p></div>
         </div>
     </footer>
     <script>
         const btn = document.getElementById('mobile-menu-button');
         const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        const icon = document.getElementById('menu-icon');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-xmark');
+            }
+        });
+
+        // Fecha o menu ao clicar em qualquer link
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                if (icon) {
+                    icon.className = 'fa-solid fa-bars text-2xl';
+                }
+            });
+        });
 
         // Validación del formulario y checkbox de seguridad
         document.getElementById('quoteForm')?.addEventListener('submit', function(e) {

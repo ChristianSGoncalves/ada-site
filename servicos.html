@@ -28,24 +28,38 @@
             <div class="flex items-center gap-4 text-[10px] font-bold">
                 <div class="flex items-center gap-2 border-r border-slate-700 pr-4 mr-2">
                     <a href="servicos.html" class="text-primary-500">PT</a>
-                    <a href="#" class="hover:text-white transition">EN</a>
-                    <a href="#" class="hover:text-white transition">ES</a>
+                    <a href="#" class="hover:text-white transition" onclick="alert('English version coming soon!')">EN</a>
+                    <a href="#" class="hover:text-white transition" onclick="alert('Versión en español próximamente!')">ES</a>
                 </div>
                 <a href="https://linktr.ee/adaservice" target="_blank" class="hover:text-white transition font-bold">LINKTREE</a>
             </div>
         </div>
     </div>
-    <header class="sticky top-0 bg-white/95 backdrop-blur-md shadow-sm z-50">
+    <header class="sticky top-0 bg-white/95 backdrop-blur-md shadow-sm z-50 transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-slate-100">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center"><a href="index.html" class="flex items-center gap-2"><span class="text-2xl font-black tracking-wider text-primary-900">ADA <span class="text-primary-500">SERVICE</span></span></a></div>
                 <nav class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
                     <a href="index.html" class="hover:text-primary-500">Home</a>
-                    <a href="index.html#sobre" class="hover:text-primary-500">Sobre Nós</a>
+                    <a href="index.html#sobre" class="hover:text-primary-500 transition">Sobre Nós</a>
                     <a href="servicos.html" class="text-primary-500">Serviços</a>
-                    <a href="index.html#contato" class="hover:text-primary-500">Contato</a>
+                    <a href="index.html#contato" class="hover:text-primary-500 transition">Contato</a>
                 </nav>
                 <div class="hidden md:flex"><a href="https://wa.me/5511916641722" target="_blank" class="bg-primary-500 hover:bg-primary-600 text-white font-bold py-2.5 px-6 rounded-full shadow-md">Orçamento Rápido</a></div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-slate-600 p-2 rounded-md">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-lg absolute w-full left-0 transition-all">
+            <div class="px-4 py-6 space-y-4 font-medium text-base">
+                <a href="index.html" class="block py-2 text-slate-700 hover:text-primary-500">Home</a>
+                <a href="index.html#sobre" class="block py-2 text-slate-700 hover:text-primary-500">Sobre Nós</a>
+                <a href="servicos.html" class="block py-2 text-primary-500 font-bold">Serviços</a>
+                <a href="index.html#contato" class="block py-2 text-slate-700 hover:text-primary-500">Contato</a>
             </div>
         </div>
     </header>
@@ -124,5 +138,30 @@
             </div>
         </div>
     </footer>
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                if (icon) {
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-xmark');
+                }
+            });
+        }
+
+        // Fecha o menu ao clicar em qualquer link
+        menu?.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                if (icon) {
+                    icon.className = 'fa-solid fa-bars text-2xl';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
