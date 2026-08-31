@@ -44,11 +44,11 @@
     <header class="sticky top-0 bg-white/95 backdrop-blur-md shadow-sm z-50 transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center"><a href="index.html" class="flex items-center gap-2"><span class="text-2xl font-black tracking-wider text-primary-900">ADA <span class="text-primary-500">SERVICE</span></span></a></div>
+                <div class="flex-shrink-0 flex items-center"><a href="../index.html" class="flex items-center gap-2"><span class="text-2xl font-black tracking-wider text-primary-900">ADA <span class="text-primary-500">SERVICE</span></span></a></div>
                 <nav class="hidden md:flex space-x-8 text-sm font-semibold">
-                    <a href="index.html" class="text-primary-500">Inicio</a>
+                    <a href="../index.html" class="text-primary-500">Inicio</a>
                     <a href="#sobre" class="text-slate-600 hover:text-primary-500 transition">Nosotros</a>
-                    <a href="servicos.html" class="text-slate-600 hover:text-primary-500 transition">Servicios</a>
+                    <a href="../servicos.html" class="text-slate-600 hover:text-primary-500 transition">Servicios</a>
                     <a href="#contato" class="text-slate-600 hover:text-primary-500 transition">Contacto</a>
                     <a href="https://wa.me/5511916561571" target="_blank" class="text-slate-600 hover:text-primary-500 transition flex items-center gap-1"><i class="fa-solid fa-user-tie"></i> Reclutamiento</a>
                 </nav>
@@ -63,9 +63,9 @@
         <!-- Menu Mobile -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-lg absolute w-full left-0 transition-all">
             <div class="px-4 py-6 space-y-4 font-medium text-base">
-                <a href="index.html" class="block py-2 text-slate-700 hover:text-primary-500">Inicio</a>
+                <a href="../index.html" class="block py-2 text-slate-700 hover:text-primary-500">Inicio</a>
                 <a href="#sobre" class="block py-2 text-slate-700 hover:text-primary-500">Nosotros</a>
-                <a href="servicos.html" class="block py-2 text-slate-700 hover:text-primary-500">Servicios</a>
+                <a href="../servicos.html" class="block py-2 text-slate-700 hover:text-primary-500">Servicios</a>
                 <a href="#contato" class="block py-2 text-slate-700 hover:text-primary-500">Contacto</a>
             </div>
         </div>
@@ -143,7 +143,7 @@
             </div>
             <div class="bg-white rounded-3xl p-8 sm:p-10 shadow-lg border border-slate-100">
                 <h3 class="font-extrabold text-2xl text-primary-900 mb-6">Solicitar Presupuesto</h3>
-                <form action="https://formspree.io/f/contato@adaservicos.com.br" method="POST" id="quoteForm" class="space-y-4">
+                <form action="#" method="POST" id="quoteForm" class="space-y-4">
                     <input type="text" name="_gotcha" style="display:none">
                     <div><label class="block text-xs font-bold uppercase text-slate-500 mb-1">Nombre Completo</label><input type="text" name="nome" required class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 focus:border-primary-500 transition text-sm"></div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -172,10 +172,10 @@
             <div>
                 <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Navegación</h4>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="index.html" class="hover:text-white transition">Inicio</a></li>
-                    <li><a href="index.html#sobre" class="hover:text-white transition">Nosotros</a></li>
-                    <li><a href="servicos.html" class="hover:text-white transition">Servicios</a></li>
-                    <li><a href="index.html#contato" class="hover:text-white transition">Contacto</a></li>
+                    <li><a href="../index.html" class="hover:text-white transition">Inicio</a></li>
+                    <li><a href="../index.html#sobre" class="hover:text-white transition">Nosotros</a></li>
+                    <li><a href="../servicos.html" class="hover:text-white transition">Servicios</a></li>
+                    <li><a href="../index.html#contato" class="hover:text-white transition">Contacto</a></li>
                 </ul>
             </div>
             <div>
@@ -188,6 +188,10 @@
     <script>
         // Renderização Dinâmica do reCAPTCHA baseado no ambiente
         const env = getEnvironmentConfig();
+
+        // Configura o endpoint do formulário dinamicamente
+        document.getElementById('quoteForm').action = env.formEndpoint;
+
         const script = document.createElement('script');
         script.src = `https://www.google.com/recaptcha/api.js?render=explicit&hl=es`;
         script.async = true;
