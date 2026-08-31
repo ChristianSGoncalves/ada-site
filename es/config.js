@@ -22,7 +22,7 @@ function getEnvironmentConfig() {
     // Suporta o domínio raiz e o prefixo www para produção
     if (hostname === APP_CONFIG.production.domain || hostname === `www.${APP_CONFIG.production.domain}`) {
         return APP_CONFIG.production;
-    } else if (hostname === APP_CONFIG.homologation.domain) {
+    } else if (hostname === APP_CONFIG.homologation.domain || hostname.startsWith('hml.')) {
         return APP_CONFIG.homologation;
     } else {
         // Padrão para desenvolvimento (localhost ou subdomínio dev)
