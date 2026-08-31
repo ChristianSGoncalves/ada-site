@@ -11,7 +11,7 @@ const APP_CONFIG = {
         recaptchaKey: '6Le_CKEtAAAAAEcQ5ZmVbj7w8qXZW5Xy5nIY45si'
     },
     development: {
-        domain: 'dev.adaservicos.com.br',
+        domain: 'christiansgoncalves.github.io',
         recaptchaKey: '6LePCaEtAAAAAGJ7hmlxosxyWI7wNhdGrum5HD7Q'
     }
 };
@@ -22,10 +22,10 @@ function getEnvironmentConfig() {
     // Suporta o domínio raiz e o prefixo www para produção
     if (hostname === APP_CONFIG.production.domain || hostname === `www.${APP_CONFIG.production.domain}`) {
         return APP_CONFIG.production;
-    } else if (hostname === APP_CONFIG.homologation.domain || hostname.startsWith('hml.')) {
+    } else if (hostname === APP_CONFIG.homologation.domain || hostname.includes('hml.')) {
         return APP_CONFIG.homologation;
     } else {
-        // Padrão para desenvolvimento (localhost ou subdomínio dev)
+        // Padrão para desenvolvimento (localhost, dev.adaservicos.com.br ou URLs do github.io)
         return APP_CONFIG.development;
     }
 }
